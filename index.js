@@ -1,4 +1,4 @@
-(function ($) {
+function ($) {
     $.fn.countdown = function (options, callback) {
       //custom 'this' selector
       thisEl = $(this);
@@ -125,5 +125,5 @@
   
   $(window).scroll(function () {
     addSticky();
-  });
+  };
   
