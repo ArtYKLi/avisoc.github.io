@@ -1,32 +1,323 @@
-<!DOCTYPE html>
-<html>
-<title>Aviation Society ECA WEEK GAME</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<style>
-body,h1 {font-family: "Raleway", sans-serif}
-body, html {height: 100%}
-.bgimg {
-  background-image: url('data:image/jpeg;base64,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');
-  min-height: 100%;
-  background-position: center;
-  background-size: cover;
-}
-</style>
-<body>
-
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-  <div class="w3-display-topleft w3-padding-large w3-xlarge">
-    Logo
-  </div>
-  <div class="w3-display-middle">
-    <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
-    <hr class="w3-border-grey" style="margin:auto;width:40%">
-    <p class="w3-large w3-center">35 days left</p>
+<video autoplay loop muted poster="screenshot.jpg" id="background">
+        <source type="video/mp4" src="https://staging.coverr.co/s3/mp4/Boxing-gym.mp4">
+        <source type="video/webm" src="https://staging.coverr.co/s3/webm/Boxing-gym.webm">
+</video>
+<div class="main">
+  <div id='content'>
+    <div class='title'>
+      <span>Aviation Society ECA WEEK Kahoot Game</span>
+    </div>
+    <p>coming soon</p>
+    <section>
+      <ul id="countdown">
+        <li><span class="days timenumbers">01</span>
+          <p class="timeRefDays timedescription">days</p>
+        </li>
+        <li><span class="hours timenumbers">00</span>
+          <p class="timeRefHours timedescription">hours</p>
+        </li>
+        <li><span class="minutes timenumbers">00</span>
+          <p class="timeRefMinutes timedescription">minutes</p>
+        </li>
+        <li><span class="seconds timenumbers yellow-text">00</span>
+          <p class="timeRefSeconds timedescription">seconds</p>
+        </li>
+      </ul>
+    </section>
+    <p>Click here for <a href="#" target="_blank">Full screen view!</a></p>
   </div>
 </div>
 
-</body>
-</html>
+<style>
+  html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700);
+
+html,
+body {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #1c1c1c;
+    font-family: "Quicksand", sans-serif;
+    overflow: hidden;
+
+    #background {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        background: url(polina.jpg) no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
+    }
+
+    .main {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        margin: 0 auto;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.5);
+
+        #content {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            min-height: 24px;
+            height: 100%;
+            position: relative;
+            text-align: center;
+            top: 33%;
+
+            .title {
+                color: white;
+                font-family: "Quicksand", sans-serif;
+                font-size: 4rem;
+                text-transform: uppercase;
+                padding-bottom: 0px;
+                margin-bottom: 0px;
+
+                span {
+                    font-size: 4rem;
+                    cursor: pointer;
+                }
+
+                &:hover {
+                    -webkit-animation: MISSION-HOVER 1.5s infinite;
+                    -moz-animation: MISSION-HOVER 1.5s infinite;
+                    -o-animation: MISSION-HOVER 1.5s infinite;
+                    animation: MISSION-HOVER 1.5s infinite;
+                    animation-direction: alternate;
+                    animation-timing-function: ease;
+                }
+
+                @-webkit-keyframes MISSION-HOVER {
+
+                    0%,
+                    100% {
+                        font-size: 4rem;
+                        color: white;
+                    }
+
+                    50% {
+                        color: #bffcff;
+                        letter-spacing: 5px;
+                        text-shadow: 0px 0px 30px rgba(191, 252, 255, 1);
+                    }
+                }
+            }
+
+            p {
+                color: #e6dbae;
+                font-family: "Quicksand", sans-serif;
+                font-size: 1.5rem;
+                margin: 0 auto;
+                padding: 0;
+                letter-spacing: 0.5rem;
+                text-transform: uppercase;
+
+                &:last-child {
+                    font-size: 0.75rem;
+                    font-weight: 700;
+                    margin: 3em auto;
+                    padding: 0;
+                    letter-spacing: 0.1rem;
+
+                    >a {
+                        text-decoration: none;
+                        color: inherit;
+                        -moz-transition: all 0.2s ease-in;
+                        -o-transition: all 0.2s ease-in;
+                        -webkit-transition: all 0.2s ease-in;
+                        transition: all 0.2s ease-in;
+
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+
+            section {
+                color: #fff;
+                margin: 0 auto;
+                line-height: 24px;
+                font-size: 1rem;
+                font-weight: 700;
+
+                ul {
+                    list-style-type: none;
+                    margin-bottom: 0;
+                    margin-left: 0;
+
+                    li {
+                        display: inline-block;
+                        margin-right: 2rem;
+                        width: 6rem;
+                    }
+                }
+
+                .timenumbers {
+                    display: block;
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    line-height: 1.5rem;
+                    margin: 0 auto;
+                    text-align: center;
+                }
+
+                p.timedescription {
+                    font-size: 0.5rem;
+                    font-variant: small-caps;
+                    line-height: 1.5rem;
+                    margin: 0 auto;
+                    text-align: center;
+                    position: relative;
+                    top: 0px;
+                }
+            }
+        }
+    }
+}
+</style>
+<script>
+  (function($) {
+    $.fn.countdown = function(options, callback) {
+        //custom 'this' selector
+        thisEl = $(this);
+
+        // array of custom settings
+        var settings = {
+            'date': null,
+            'format': null
+        };
+
+        // append the settings array to options
+        if (options) {
+            $.extend(settings, options);
+        }
+
+        //create the countdown processing function
+        function countdown_proc() {
+            var eventDate = Date.parse(settings.date) / 1000;
+            var currentDate = Math.floor($.now() / 1000);
+
+            if (eventDate <= currentDate) {
+                callback.call(this);
+                clearInterval(interval);
+            }
+
+            var seconds = eventDate - currentDate;
+
+            var days = Math.floor(seconds / (60 * 60 * 24));
+            //calculate the number of days
+
+            seconds -= days * 60 * 60 * 24;
+            //update the seconds variable with number of days removed
+
+            var hours = Math.floor(seconds / (60 * 60));
+            seconds -= hours * 60 * 60;
+            //update the seconds variable with number of hours removed
+
+            var minutes = Math.floor(seconds / 60);
+            seconds -= minutes * 60;
+            //update the seconds variable with number of minutes removed
+
+            //conditional statements
+            if (days == 1) { thisEl.find(".timeRefDays").text("day"); } else { thisEl.find(".timeRefDays").text("days"); }
+            if (hours == 1) { thisEl.find(".timeRefHours").text("hour"); } else { thisEl.find(".timeRefHours").text("hours"); }
+            if (minutes == 1) { thisEl.find(".timeRefMinutes").text("minute"); } else { thisEl.find(".timeRefMinutes").text("minutes"); }
+            if (seconds == 1) { thisEl.find(".timeRefSeconds").text("second"); } else { thisEl.find(".timeRefSeconds").text("seconds"); }
+
+            //logic for the two_digits ON setting
+            if (settings.format == "on") {
+                days = (String(days).length >= 2) ? days : "0" + days;
+                hours = (String(hours).length >= 2) ? hours : "0" + hours;
+                minutes = (String(minutes).length >= 2) ? minutes : "0" + minutes;
+                seconds = (String(seconds).length >= 2) ? seconds : "0" + seconds;
+            }
+
+            //update the countdown's html values.
+            thisEl.find(".days").text(days);
+            thisEl.find(".hours").text(hours);
+            thisEl.find(".minutes").text(minutes);
+            thisEl.find(".seconds").text(seconds);
+        }
+
+        //run the function
+        countdown_proc();
+
+        //loop the function
+        interval = setInterval(countdown_proc, 1000);
+    };
+
+})(jQuery);
+
+
+
+//Provide the plugin settings
+$("#countdown").countdown({
+        //The countdown end date
+        date: "2 November 2020 08:05:00",
+
+        // on (03:07:52) | off (3:7:52) - two_digits set to ON maintains layout consistency
+        format: "on"
+    },
+
+    function() {
+        // This will run when the countdown ends
+        alert("We're Out Now");
+    });
+
+
+function setHeights() {
+    var windowHeight = $(window).height();
+    $('.slide').height(windowHeight);
+}
+
+setHeights();
+
+$(window).resize(function() {
+    setHeights();
+});
+
+function addSticky() {
+    $('.slide').each(function() {
+        var scrollerAnchor = $(this).offset().top;
+        if (window.scrollY >= scrollerAnchor) {
+            $(this).addClass('fix-it');
+        } else {
+            $(this).removeClass('fix-it');
+        }
+    });
+}
+
+$(window).scroll(function() {
+    addSticky();
+});
+</script>
