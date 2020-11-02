@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <video autoplay loop muted poster="screenshot.jpg" id="background">
         <source type="video/mp4" src="https://staging.coverr.co/s3/mp4/Boxing-gym.mp4">
@@ -8,22 +10,17 @@
     <div class='title'>
       <span>Aviation Society ECA WEEK Kahoot Game</span>
     </div>
-    <p>Coming soon</p>
+    
     <section>
-      <ul id="countdown">
-        <li><span class="days timenumbers">01</span>
-          <p class="timeRefDays timedescription">days</p>
-        </li>
-        <li><span class="hours timenumbers">00</span>
-          <p class="timeRefHours timedescription">hours</p>
-        </li>
-        <li><span class="minutes timenumbers">00</span>
-          <p class="timeRefMinutes timedescription">minutes</p>
-        </li>
-        <li><span class="seconds timenumbers yellow-text">00</span>
-          <p class="timeRefSeconds timedescription">seconds</p>
-        </li>
+        <h3>There are few rules to be noted :</u3>
+          <h5>1. Please use your class,class no.,and name as the username.
+          Eg) 1F40_(name)<br>
+          2. Repeated attempts will be disqualified<br>
+          3. No third party kahoot apps are allowed </h5>
+          I Agree to the rules of this competition   <input type="checkbox" id="myCheck" onclick="clickdabox()">
+          <br><a class="w3-button w3-white" href="https://artykli.github.io/aviasoc.github.io/kh.html">Continue</a>  
 <style>
+  
  @import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700);
 html {
   box-sizing: border-box;
@@ -45,7 +42,7 @@ body {
 }
 html #background,
 body #background {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   min-width: 100%;
@@ -91,14 +88,14 @@ html .main #content .title,
 body .main #content .title {
   color: white;
   font-family: "Quicksand", sans-serif;
-  font-size: 4rem;
+  font-size: 3rem;
   text-transform: uppercase;
   padding-bottom: 0px;
   margin-bottom: 0px;
 }
 html .main #content .title span,
 body .main #content .title span {
-  font-size: 4rem;
+  font-size: 3rem;
   cursor: pointer;
 }
 html .main #content .title:hover,
@@ -113,7 +110,7 @@ body .main #content .title:hover {
 @-webkit-keyframes MISSION-HOVER {
   0%,
                     100% {
-    font-size: 4rem;
+    font-size: 3rem;
     color: white;
   }
   50% {
@@ -194,21 +191,18 @@ body .main #content section p.timedescription {
 <script>
 (function ($) {
   $.fn.countdown = function (options, callback) {
-    //custom 'this' selector
+
     thisEl = $(this);
 
-    // array of custom settings
     var settings = {
       date: null,
       format: null
     };
 
-    // append the settings array to options
     if (options) {
       $.extend(settings, options);
     }
 
-    //create the countdown processing function
     function countdown_proc() {
       var eventDate = Date.parse(settings.date) / 1000;
       var currentDate = Math.floor($.now() / 1000);
@@ -221,20 +215,16 @@ body .main #content section p.timedescription {
       var seconds = eventDate - currentDate;
 
       var days = Math.floor(seconds / (60 * 60 * 24));
-      //calculate the number of days
-
+     
       seconds -= days * 60 * 60 * 24;
-      //update the seconds variable with number of days removed
-
+      
       var hours = Math.floor(seconds / (60 * 60));
       seconds -= hours * 60 * 60;
-      //update the seconds variable with number of hours removed
+     
 
       var minutes = Math.floor(seconds / 60);
       seconds -= minutes * 60;
-      //update the seconds variable with number of minutes removed
-
-      //conditional statements
+    
       if (days == 1) {
         thisEl.find(".timeRefDays").text("day");
       } else {
@@ -256,7 +246,7 @@ body .main #content section p.timedescription {
         thisEl.find(".timeRefSeconds").text("seconds");
       }
 
-      //logic for the two_digits ON setting
+      
       if (settings.format == "on") {
         days = String(days).length >= 2 ? days : "0" + days;
         hours = String(hours).length >= 2 ? hours : "0" + hours;
@@ -271,26 +261,21 @@ body .main #content section p.timedescription {
       thisEl.find(".seconds").text(seconds);
     }
 
-    //run the function
+  
     countdown_proc();
 
-    //loop the function
+
     interval = setInterval(countdown_proc, 1000);
   };
 })(jQuery);
 
-//Provide the plugin settings
 $("#countdown").countdown(
   {
-    //The countdown end date
     date: "2 November 2020 17:05:00",
-
-    // on (03:07:52) | off (3:7:52) - two_digits set to ON maintains layout consistency
-    format: "on"
+ format: "on"
   },
 
   function () {
-    // This will run when the countdown ends
     alert("We're Out Now");
   }
 );
@@ -322,3 +307,5 @@ $(window).scroll(function () {
 });
 
 </script>
+
+
